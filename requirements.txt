@@ -1,0 +1,12 @@
+python-dotenv
+langchain
+langchain-community
+langchain-openai
+langchainhub
+unstructured
+chromadb
+openai
+tiktoken
+streamlit
+huggingface_hub
+sentence-transformers
