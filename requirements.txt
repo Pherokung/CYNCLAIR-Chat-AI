@@ -2,11 +2,10 @@ python-dotenv
 langchain
 langchain-community
 langchain-openai
+langchain_core
 langchainhub
-unstructured
 chromadb
 openai
-tiktoken
 streamlit
 huggingface_hub
 sentence-transformers
