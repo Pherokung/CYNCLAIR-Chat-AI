@@ -1,14 +1,10 @@
-
-FROM python:3.12-slim
-
-ENV PYTHONUNBUFFERED 1
-
-WORKDIR /app
-
-COPY ./app/
-
-RUN pip install -r /app/requirements.txt
+FROM python:3.10
 
 EXPOSE 8080
+WORKDIR /app
 
-CMD ["streamlit", "run" ,"./scripts/main.py", "--server.port", "8080"]
+COPY . ./
+
+RUN pip install -r requirements.txt
+
+ENTRYPOINT ["streamlit", "run", "./scripts/main.py", "--server.port=8080", "--server.address=0.0.0.0"]
