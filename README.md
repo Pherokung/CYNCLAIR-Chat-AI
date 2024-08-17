@@ -15,5 +15,5 @@ You need to use your own API key.
 
 3. To run the server
 ```
-streamlit run .\scripts\main.py
+streamlit run .\scripts\app.py
 ```
