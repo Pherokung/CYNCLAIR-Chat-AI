@@ -1,13 +1,6 @@
 import streamlit as st
-import os
-from dotenv import load_dotenv
-from langchain_community.chat_message_histories import StreamlitChatMessageHistory
-from langchain_community.embeddings import OpenAIEmbeddings
 
-from ensemble import ensemble_retriever_from_docs
-from full_chain import create_full_chain, ask_question
-from loader import load_md_files
-from loader import list_md_files
+from functions.loader import list_md_files
 
 st.set_page_config(page_title="Database", page_icon="📂")
 
