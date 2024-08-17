@@ -1,23 +1,33 @@
 import json
 import os
 from dotenv import load_dotenv
-from langchain_openai import OpenAI
+from langchain_openai import ChatOpenAI
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 
 
 # Specify the directory path
-directory_path = 'CVE_Database\CVE_JSON'
-target_path = 'CVE_Database\CVE_MD'
+directory_path = 'scripts\CVE_Database\CVE_JSON'
+target_path = 'scripts\CVE_Database\CVE_MD'
 file_list = os.listdir(directory_path)
 
 # Load API keys
 load_dotenv()
 
 def set_up_LLMs():
-    llm = OpenAI(temperature=0.2)
+    llm = ChatOpenAI(temperature=0)
     prompt = ChatPromptTemplate.from_messages(
-        [("user", "Convert the given JSON object into an unstructured, readable single paragraph within 1000 characters. Always show its CVE_ID first. JSON: {JSON_file}")],
+        [("user", "You are an assistant that describes JSON objects in English. The results must not exceed 1000 characters and does not include any URL or links. \
+          when you receive json input, I want you to describe it in the format below. This is THE TEMPLATE:\
+            CVE ID: [cveId]\
+            Title: [title]\
+            Published Date: [datePublished]\
+            Last Updated: [dateUpdated]\
+            Affected Product: [affected.Product]\
+            Metrics and Score Level: [metrics]\
+            Credit: [credits]\
+            Description: [descriptions]\
+            Here is the JSON object I want to be converted: {JSON_file}")],
     )
     chain = prompt | llm | StrOutputParser()
     
