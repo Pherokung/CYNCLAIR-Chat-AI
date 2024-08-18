@@ -1,10 +1,15 @@
 import os
-from pprint import pprint 
 from pathlib import Path
 from langchain_community.document_loaders import TextLoader
 from langchain_community.document_loaders import WikipediaLoader
 
-directory_path = 'scripts\CVE_Database\CVE_MD'
+try:
+    base = Path(__file__).parent.parent
+    directory_path = base / 'CVE_Database' / 'CVE_MD'
+
+except:
+    print("Error: Cannot file the folder CVE_MD")
+
 
 def list_md_files(data_dir = directory_path):
     paths = Path(data_dir).glob('**/*.md')
