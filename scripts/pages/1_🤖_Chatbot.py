@@ -26,13 +26,13 @@ def show_ui(qa, prompt_to_user="How may I help you?"):
     # Display chat messages
     for message in st.session_state.messages:
         with st.chat_message(message["role"]):
-            st.write(message["role"] + ": " + message["content"])
+            st.write(message["content"])
 
     # User-provided prompt
     if prompt := st.chat_input():
         st.session_state.messages.append({"role": "User", "content": prompt})
         with st.chat_message("User"):
-            st.write("User" + ": " + prompt)
+            st.write(prompt)
 
     # Generate a new response if last message is not from assistant
     if st.session_state.messages[-1]["role"] != "AI":

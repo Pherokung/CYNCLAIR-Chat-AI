@@ -17,13 +17,13 @@ load_dotenv()
 
 def show_ui(qa, prompt_to_user="I can provide a report outline if you give me the chat history."):
     with st.chat_message("AI"):
-        st.write("AI: " + prompt_to_user)
+        st.write(prompt_to_user)
     
     with st.chat_message("AI"):
         with st.spinner("Thinking..."):
             prompt = "Show me the report outline in the template provided"
             response = ask_question(qa, prompt)
-            st.write("AI: " + response.content)
+            st.write(response.content)
 
 @st.cache_resource
 def get_retriever(openai_api_key=None):
