@@ -1,9 +1,11 @@
 import streamlit as st
 
 from functions.loader import list_md_files
+from functions.default_sidebar import default_sidebar
 
 st.set_page_config(page_title="Database", page_icon="📂")
-
+page_name = "Database"
+default_sidebar(page_name)
 st.markdown("# Show Files")
 #st.sidebar.header("Show Files")
 st.write(

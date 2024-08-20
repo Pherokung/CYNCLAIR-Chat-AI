@@ -7,9 +7,11 @@ from langchain_community.embeddings import OpenAIEmbeddings
 from functions.ensemble import ensemble_retriever_from_docs
 from functions.full_chain import create_full_chain, ask_question
 from functions.loader import load_md_files
+from functions.default_sidebar import default_sidebar
 
 st.set_page_config(page_title="Report", page_icon="📝")
-
+page_name = "Report"
+default_sidebar(page_name)
 st.markdown("# Report")
 
 load_dotenv()
