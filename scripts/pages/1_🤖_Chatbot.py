@@ -9,8 +9,6 @@ from functions.full_chain import create_full_chain, ask_question
 from functions.loader import load_md_files
 from functions.default_sidebar import default_sidebar
 
-from st_copy_to_clipboard import st_copy_to_clipboard
-
 st.set_page_config(
     page_title="Chatbot",
     page_icon="🤖",
