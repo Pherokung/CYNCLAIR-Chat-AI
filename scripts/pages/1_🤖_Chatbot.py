@@ -97,8 +97,4 @@ def run():
     else:
         st.stop()
 
-def Report():
-    text = "under construction"
-    st.markdown(text)
-
 run()
