@@ -30,16 +30,25 @@ def create_full_chain(retriever, openai_api_key=None, chat_memory=ChatMessageHis
         You are required to answer in this template:
 
         Incident Details:
+
         Type of Incident: 
+        
         Description of Incident: 
+        
         Affected Systems or Data:
+        
         Potential Impact:
+        
         Evidence and Logs:
+        
         Actions Taken:
+        
         Security Improvements: 
+        
         Lessons Learned:
         
-        Context: {context}
+        
+        Here is the Context: {context}
         
         Question: """
 
