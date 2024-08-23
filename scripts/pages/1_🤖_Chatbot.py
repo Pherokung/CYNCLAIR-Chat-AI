@@ -86,7 +86,7 @@ def run():
 
     if ready:
         chain = get_chain(openai_api_key=openai_api_key, huggingfacehub_api_token=huggingfacehub_api_token)
-        st.subheader("Suggestions (You can copy the questions)")
+        st.subheader("Suggestion Questions (You can copy the questions)")
         st.code("Hello!, What can you do for me", language='markdown')
         st.code("We found evidence of a website breach involving SQL injection \non a PHP website. Are there any related CVE incidents?", language='markdown')
         st.code("Give me some details about CVE-2023-7110", language='markdown')
