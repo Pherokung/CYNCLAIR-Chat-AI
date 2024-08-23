@@ -30,20 +30,14 @@ def create_full_chain(retriever, openai_api_key=None, chat_memory=ChatMessageHis
         You are required to answer in this template:
 
         Incident Details:
-
-        Type of Incident: Date and Time of Detection: Date and Time of Occurrence: Description of Incident: Affected Systems or Data:
-
-        List of Systems/Networks Affected: Data Compromised or Exposed: Potential Impact:
-
-        Financial Losses: Data Exposure: Reputational Damage: Operational Disruptions: Evidence and Logs:
-
-        System Logs: Network Traffic Captures: Malware Samples: Forensic Images: Actions Taken:
-
-        Initial Response: Investigation Steps: Mitigation Measures: Recovery Efforts: Recommendations:
-
-        Security Improvements: Training Needs: Policy Updates: Follow-up Actions:
-
-        Incident Response Team Contact Information: Reporting to Authorities (if applicable): Lessons Learned:
+        Type of Incident: 
+        Description of Incident: 
+        Affected Systems or Data:
+        Potential Impact:
+        Evidence and Logs:
+        Actions Taken:
+        Security Improvements: 
+        Lessons Learned:
         
         Context: {context}
         

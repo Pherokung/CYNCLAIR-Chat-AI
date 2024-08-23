@@ -65,7 +65,7 @@ def run():
     if ready:
         chain = get_chain(openai_api_key=openai_api_key, huggingfacehub_api_token=huggingfacehub_api_token)
         st.subheader("I can provide a report outline based on the chat history.")
-        show_ui(chain, "I recieved the chat history. I am writing the report.")
+        show_ui(chain, "I have recieved the incident logs and chat history. I am drafting the report outline.")
     else:
         st.stop()
 

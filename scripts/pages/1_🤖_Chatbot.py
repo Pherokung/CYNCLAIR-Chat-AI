@@ -9,6 +9,8 @@ from functions.full_chain import create_full_chain, ask_question
 from functions.loader import load_md_files
 from functions.default_sidebar import default_sidebar
 
+from st_copy_to_clipboard import st_copy_to_clipboard
+
 st.set_page_config(
     page_title="Chatbot",
     page_icon="🤖",
@@ -84,7 +86,13 @@ def run():
 
     if ready:
         chain = get_chain(openai_api_key=openai_api_key, huggingfacehub_api_token=huggingfacehub_api_token)
-        st.subheader("Ask me questions about CVE Database")
+        st.subheader("Suggestions (You can copy the questions)")
+        st.code("Hello!, What can you do for me", language='markdown')
+        st.code("We found evidence of a website breach involving SQL injection \non a PHP website. Are there any related CVE incidents?", language='markdown')
+        st.code("Give me some details about CVE-2023-7110", language='markdown')
+        st.code("What is the publish and last update date of that CVE?", language='markdown')
+        
+        
         show_ui(chain, "What would you like to know?")
     else:
         st.stop()
