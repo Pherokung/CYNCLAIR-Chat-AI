@@ -20,6 +20,12 @@ st.title("CVE Chatbot 🤖")
 
 load_dotenv()
 
+# Pre-record Questions
+ques = {
+    "I would like some advice on aviation technology, can you give me some advice?" : "Absolutely. Lets look at Rv Connex which specializes in aviation connectivity solutions. Focus on enhancing in-flight Wi-Fi, ensuring robust cybersecurity, and creating user-friendly systems to improve passenger experience and operational efficiency.",
+    "Can you tell me about Cynclair?" : "Cynclair Company is primarily known for its cybersecurity services. The company launched its offerings at the Stock @ Show 2022 event, showcasing its capabilities in response to the increasing frequency and sophistication of cyberattacks. Cynclair's services are backed by a Security Operation Center (SOC) that employs advanced detection techniques, including artificial intelligence and machine learning, and is led by a team of certified cybersecurity experts",
+    "Do you know Tanajak Watanakij?" : "Tanajak Watanakij is the Vice President of Cybersecurity and Data Analytics at RV Connex, a company based in Thailand. He is also the brain behind Cynclair, a cybersecurity company, and serves as its Chief Technology Officer (CTO)"
+}
 
 def show_ui(qa, prompt_to_user="How may I help you?"):
     
@@ -42,9 +48,15 @@ def show_ui(qa, prompt_to_user="How may I help you?"):
     if st.session_state.messages[-1]["role"] != "AI":
         with st.chat_message("AI"):
             with st.spinner("Thinking..."):
-                response = ask_question(qa, prompt)
-                st.markdown(response.content)
-        message = {"role": "AI", "content": response.content}
+                
+                if prompt in ques:
+                    answer = ques[prompt]
+                else:
+                    response = ask_question(qa, prompt)
+                    answer = response.content
+                st.markdown(answer)
+
+        message = {"role": "AI", "content": answer}
         st.session_state.messages.append(message)
 
 
