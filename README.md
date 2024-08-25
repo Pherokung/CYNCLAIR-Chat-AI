@@ -6,6 +6,17 @@
   <br>
 </h1>
 
+<h4 align="center"> Description </h4>
+The AI Agentic Flow Assistant empowers Cybersecurity with 
+AI-driven to reduce alert fatigue and support continuous learning to stay ahead of cyber threats.
+
+<h4 align="center"> Function </h4>
+1. Real-time attack detection (Future Plan)
+2. Cygentic chatbot that can provide relevant incidents in the database
+3. displaying and summarizing files in the database
+4. Generating Report draft based on attack logs, Cygentic chat session history, and previous reports in the database
+
+
 <h4 align="center">🚨 Installation 🚨</h4>
 
 1. Install requirements
@@ -22,6 +33,9 @@ Your own API keys are required.
 
 
 3. Run the server
+
+Note that you can alternatively access the demo here: https://cynclair.podsawee.com/
+
 ```
 streamlit run .\scripts\main.py
 ```
