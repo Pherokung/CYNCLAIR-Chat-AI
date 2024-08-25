@@ -8,7 +8,7 @@
 
 <h4 align="center">🚨 Installation 🚨</h4>
 
-1. To install requirements
+1. Install requirements
 ```
 pip install -r requirements.txt
 ```
@@ -18,10 +18,10 @@ pip install -r requirements.txt
 OPENAI_API_KEY = "sk-proj-xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 HUGGINGFACEHUB_API_TOKEN = "hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
-You need to use your own API key.
+Your own API keys are required.
 
 
-3. To run the server
+3. Run the server
 ```
 streamlit run .\scripts\main.py
 ```
