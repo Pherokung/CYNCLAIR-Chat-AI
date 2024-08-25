@@ -11,10 +11,14 @@ The AI Agentic Flow Assistant empowers Cybersecurity with
 AI-driven to reduce alert fatigue and support continuous learning to stay ahead of cyber threats.
 
 <h4 align="center"> Function </h4>
+
 1. Real-time attack detection (Future Plan)
+
 2. Cygentic chatbot that can provide relevant incidents in the database
-3. displaying and summarizing files in the database
-4. Generating Report draft based on attack logs, Cygentic chat session history, and previous reports in the database
+3. 
+4. displaying and summarizing files in the database
+5. 
+6. Generating Report draft based on attack logs, Cygentic chat session history, and previous reports in the database
 
 
 <h4 align="center">🚨 Installation 🚨</h4>
