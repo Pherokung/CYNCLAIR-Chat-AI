@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://podsawee.com/cygentic_logo.png" alt="Cygentic Logo" width="200">
+  <img src="https://github.com/Pherokung/CYNCLAIR-Chat-AI/blob/main/scripts/images/cygentic_logo.png" alt="Cygentic Logo" width="200">
   <br>
   Cygentic
   <br>
